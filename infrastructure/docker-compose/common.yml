@@ -1,0 +1,6 @@
+# Docker Compose configuration for common services
+version: '3.8'
+
+networks:
+  food-ordering-system:
+    driver: bridge
