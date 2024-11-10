@@ -9,10 +9,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <packaging>pom</packaging>
-
-
     <artifactId>customer-domain</artifactId>
+    <packaging>pom</packaging>
 
     <modules>
         <module>customer-application-service</module>

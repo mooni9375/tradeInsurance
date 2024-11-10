@@ -11,6 +11,7 @@
 
     <artifactId>app-domain</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>app-application-service</module>
         <module>app-domain-core</module>
