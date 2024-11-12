@@ -1,7 +1,6 @@
 package com.trade.insurance.system.app.service.domain.dto.create;
 
 import com.trade.insurance.system.domain.valueobject.CountryCode;
-import com.trade.insurance.system.app.service.domain.valueobject.StreetAddress;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +21,7 @@ public class CreateAppCommand {
     private final String exporterName;
 
     @NotNull
-    private final StreetAddress exporterAddress;
+    private final AppStreetAddress exporterAddress;
 
     @NotNull
     private final CountryCode importerCountryCode;
@@ -31,7 +30,7 @@ public class CreateAppCommand {
     private final String importerName;
 
     @NotNull
-    private final StreetAddress importerAddress;
+    private final AppStreetAddress importerAddress;
 
     @NotNull
     private final String exportProduct;

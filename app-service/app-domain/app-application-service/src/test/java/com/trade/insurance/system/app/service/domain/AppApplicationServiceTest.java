@@ -1,5 +1,6 @@
 package com.trade.insurance.system.app.service.domain;
 
+import com.trade.insurance.system.app.service.domain.dto.create.AppStreetAddress;
 import com.trade.insurance.system.app.service.domain.dto.create.CreateAppCommand;
 import com.trade.insurance.system.app.service.domain.dto.create.CreateAppResponse;
 import com.trade.insurance.system.app.service.domain.entity.App;
@@ -9,7 +10,6 @@ import com.trade.insurance.system.app.service.domain.mapper.AppDataMapper;
 import com.trade.insurance.system.app.service.domain.ports.input.service.AppApplicationService;
 import com.trade.insurance.system.app.service.domain.ports.output.repository.AppRepository;
 import com.trade.insurance.system.app.service.domain.ports.output.repository.CustomerRepository;
-import com.trade.insurance.system.app.service.domain.valueobject.StreetAddress;
 import com.trade.insurance.system.domain.valueobject.AppId;
 import com.trade.insurance.system.domain.valueobject.AppStatus;
 import com.trade.insurance.system.domain.valueobject.CountryCode;
@@ -64,14 +64,14 @@ public class AppApplicationServiceTest {
         createAppCommand = CreateAppCommand.builder()
                 .customerId(CUSTOMER_ID)
                 .exporterName("Exporter Tester")
-                .exporterAddress(StreetAddress.builder()
+                .exporterAddress(AppStreetAddress.builder()
                                             .city("SEOUL")
                                             .street("JONGRO")
                                             .postalCode("12345")
                                             .build())
                 .importerCountryCode(CountryCode.UNITED_KINGDOM)
                 .importerName("Importer Exeter")
-                .importerAddress(StreetAddress.builder()
+                .importerAddress(AppStreetAddress.builder()
                                             .city("EXETER")
                                             .street("EXETER STREET")
                                             .postalCode("77777")
@@ -83,14 +83,14 @@ public class AppApplicationServiceTest {
         createAppCommandAppAmountIsUnder5000 = CreateAppCommand.builder()
                 .customerId(CUSTOMER_ID)
                 .exporterName("Exporter Tester")
-                .exporterAddress(StreetAddress.builder()
+                .exporterAddress(AppStreetAddress.builder()
                         .city("SEOUL")
                         .street("JONGRO")
                         .postalCode("12345")
                         .build())
                 .importerCountryCode(CountryCode.UNITED_KINGDOM)
                 .importerName("Importer Exeter")
-                .importerAddress(StreetAddress.builder()
+                .importerAddress(AppStreetAddress.builder()
                         .city("EXETER")
                         .street("EXETER STREET")
                         .postalCode("77777")
@@ -102,14 +102,14 @@ public class AppApplicationServiceTest {
         createAppCommandAppAmountIsNotUnitOf1000 = CreateAppCommand.builder()
                 .customerId(CUSTOMER_ID)
                 .exporterName("Exporter Tester")
-                .exporterAddress(StreetAddress.builder()
+                .exporterAddress(AppStreetAddress.builder()
                         .city("SEOUL")
                         .street("JONGRO")
                         .postalCode("12345")
                         .build())
                 .importerCountryCode(CountryCode.UNITED_KINGDOM)
                 .importerName("Importer Exeter")
-                .importerAddress(StreetAddress.builder()
+                .importerAddress(AppStreetAddress.builder()
                         .city("EXETER")
                         .street("EXETER STREET")
                         .postalCode("77777")

@@ -25,8 +25,8 @@ public class AppStreetAddressEntity {
     private AppEntity app;
 
     private String street;
-    private String postalCode;
     private String city;
+    private String postalCode;
 
     @Override
     public boolean equals(Object o) {
