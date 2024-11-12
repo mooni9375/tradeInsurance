@@ -21,12 +21,15 @@ public class App extends AggregateRoot<AppId> {
     private final String importerName;
     private final StreetAddress importerAddress;
 
+    private final String exportProduct;
     private final Money appAmount;
 
     // 생성 후 비즈니스 로직에서 셋팅하기 위해 not final
     private TrackingId trackingId;
     private AppStatus appStatus;
+
     private List<String> failureMessages;
+    public static final String FAILURE_MESSAGE_DELIMITER = ",";
 
 
     // 청약 생성
@@ -131,6 +134,10 @@ public class App extends AggregateRoot<AppId> {
         return importerAddress;
     }
 
+    public String getExportProduct() {
+        return exportProduct;
+    }
+
     public Money getAppAmount() {
         return appAmount;
     }
@@ -158,6 +165,7 @@ public class App extends AggregateRoot<AppId> {
         importerCountryCode = builder.importerCountryCode;
         importerName = builder.importerName;
         importerAddress = builder.importerAddress;
+        exportProduct = builder.exportProduct;
         appAmount = builder.appAmount;
         trackingId = builder.trackingId;
         appStatus = builder.appStatus;
@@ -176,6 +184,7 @@ public class App extends AggregateRoot<AppId> {
         private CountryCode importerCountryCode;
         private String importerName;
         private StreetAddress importerAddress;
+        private String exportProduct;
         private Money appAmount;
         private TrackingId trackingId;
         private AppStatus appStatus;
@@ -184,7 +193,7 @@ public class App extends AggregateRoot<AppId> {
         private Builder() {
         }
 
-        public Builder id(AppId val) {
+        public Builder appId(AppId val) {
             appId = val;
             return this;
         }
@@ -216,6 +225,11 @@ public class App extends AggregateRoot<AppId> {
 
         public Builder importerAddress(StreetAddress val) {
             importerAddress = val;
+            return this;
+        }
+
+        public Builder exportProduct(String val) {
+            exportProduct = val;
             return this;
         }
 

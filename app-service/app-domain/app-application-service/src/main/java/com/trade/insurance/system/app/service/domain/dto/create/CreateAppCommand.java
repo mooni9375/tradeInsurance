@@ -1,8 +1,7 @@
 package com.trade.insurance.system.app.service.domain.dto.create;
 
-import com.trade.insurance.system.app.service.domain.valueobject.StreetAddress;
 import com.trade.insurance.system.domain.valueobject.CountryCode;
-import com.trade.insurance.system.domain.valueobject.Money;
+import com.trade.insurance.system.app.service.domain.valueobject.StreetAddress;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,6 +32,9 @@ public class CreateAppCommand {
 
     @NotNull
     private final StreetAddress importerAddress;
+
+    @NotNull
+    private final String exportProduct;
 
     @NotNull
     private final BigDecimal appAmount;

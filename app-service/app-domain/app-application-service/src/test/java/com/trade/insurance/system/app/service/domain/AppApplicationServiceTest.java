@@ -76,6 +76,7 @@ public class AppApplicationServiceTest {
                                             .street("EXETER STREET")
                                             .postalCode("77777")
                                             .build())
+                .exportProduct("Test Product")
                 .appAmount(new BigDecimal("7000.00"))
                 .build();
 
@@ -94,6 +95,7 @@ public class AppApplicationServiceTest {
                         .street("EXETER STREET")
                         .postalCode("77777")
                         .build())
+                .exportProduct("Test Product")
                 .appAmount(new BigDecimal("4999.00"))
                 .build();
 
@@ -112,6 +114,7 @@ public class AppApplicationServiceTest {
                         .street("EXETER STREET")
                         .postalCode("77777")
                         .build())
+                .exportProduct("Test Product")
                 .appAmount(new BigDecimal("7500.00"))
                 .build();
 

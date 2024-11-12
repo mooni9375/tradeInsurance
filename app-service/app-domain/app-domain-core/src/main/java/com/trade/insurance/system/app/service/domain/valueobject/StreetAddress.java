@@ -1,15 +1,8 @@
 package com.trade.insurance.system.app.service.domain.valueobject;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-
 import java.util.Objects;
 import java.util.UUID;
 
-@Getter
-@Builder
-@AllArgsConstructor
 public class StreetAddress {
 
     private final UUID id;
@@ -17,6 +10,12 @@ public class StreetAddress {
     private final String postalCode;
     private final String city;
 
+    public StreetAddress(UUID id, String street, String postalCode, String city) {
+        this.id = id;
+        this.street = street;
+        this.postalCode = postalCode;
+        this.city = city;
+    }
 
     public UUID getId() {
         return id;
