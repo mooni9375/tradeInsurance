@@ -1,17 +1,12 @@
 package com.trade.insurance.system.review.service.domain.entity;
 
 import com.trade.insurance.system.domain.entity.AggregateRoot;
-import com.trade.insurance.system.domain.valueobject.AppId;
-import com.trade.insurance.system.domain.valueobject.CountryCode;
-import com.trade.insurance.system.domain.valueobject.Money;
+import com.trade.insurance.system.domain.valueobject.*;
 import com.trade.insurance.system.review.service.domain.exception.ReviewDomainException;
-import com.trade.insurance.system.review.service.domain.valueobject.ReviewId;
-import com.trade.insurance.system.review.service.domain.valueobject.ReviewStatus;
 
 import java.math.BigDecimal;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.List;
 import java.util.UUID;
 
 public class Review extends AggregateRoot<ReviewId> {
